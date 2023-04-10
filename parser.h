@@ -11,16 +11,20 @@
 #include "compiler.h"
 #include "lexer.h"
 
+using namespace std;
+
 class Parser
 {
     private:
-
+        
     public:
+        string varNames[1000];
+
         LexicalAnalyzer lexer;
         struct InstructionNode* head;
         struct InstructionNode* currIns;
 
-        void syntax_error();
+        void syntax_error(TokenType expected, Token actual);
 		void expect(TokenType token);
 
         void parse_program();
@@ -46,6 +50,8 @@ class Parser
         void parse_default_case();
         void parse_case();
         void parse_num_list();
+
+        int location(string varName);
 };
 
 #endif  //__PARSER__H__
