@@ -1,4 +1,4 @@
-# CSE340Project3
+# Basic Programming Language
 This project was created by @ArielGGutierrez, and @Sgomez47-ASU for a university class focusing on programming languages.
 
 The program is an attempt to make a small compiler that takes in a program text file as input and executes the instructions of the program described.  The language is defined by the following CFG:
